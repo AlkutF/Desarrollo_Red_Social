@@ -1,0 +1,30 @@
+:root{
+
+}
+/*Estilos css Login*/
+body {
+    background-color: #f8f9fa; /* Fondo claro para mayor contraste */
+}
+.login-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.btn-purple {
+    background-color: #6f42c1;
+    color: #fff;
+}
+.btn-purple:hover {
+    background-color: #5a2a8b;
+}
+.form-control {
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
