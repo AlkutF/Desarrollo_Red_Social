@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 class Base{
     private $host = DB_HOST;
     private $dbname = DB_NAME;

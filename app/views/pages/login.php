@@ -18,8 +18,15 @@ include_once URL_APP . '/views/custom/navbar.php';
                         </div>
                         <button type="submit" class="btn btn-purple btn-block ">Ingresar</button>
                     </form>
+                    <?php
+                    if(isset($_SESSION['loginComplete'])){
+                        echo '<div class="alert alert-danger mt-3" role="alert">'.$_SESSION['loginComplete'].'</div>';
+                        unset($_SESSION['loginComplete']);
+                    }
+
+                    ?>
                     <div class="text-center mt-3">
-                        <span class="mr-2 " >Ya tienes una cuenta</span><a href="<?php echo URL_PROJECT?>/home/registro">Ingresar</a>
+                        <span class="mr-2 " >No tienes una cuenta</span><a href="<?php echo URL_PROJECT?>/home/register">Registrate</a>
                     </div>
                 </div>
                 <div class="col-md-6 d-flex justify-content-center align-items-center">
