@@ -59,7 +59,7 @@ class Base{
         return $this->stmt->fetch(PDO::FETCH_OBJ);
     }
     public function rowCount(){
-        $this->execute();
+       
         return $this->stmt->rowCount();
     }
 }

@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/d64bc9fded.js" crossorigin="anonymous"></script>
     <!--CSS-->
     <link rel="stylesheet" href="<?php echo URL_PROJECT?>/public/css/style.css">
-
+    <link rel="stylesheet" href="<?php echo URL_PROJECT?>/public/css/navbar.css">
     <title><?php echo NAME_PROJECT?></title>
 </head>
 <body>

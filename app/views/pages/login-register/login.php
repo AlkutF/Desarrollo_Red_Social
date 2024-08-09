@@ -1,7 +1,7 @@
 
 <?php
 include_once URL_APP . '/views/custom/header.php';
-include_once URL_APP . '/views/custom/navbar.php';
+
 ?>
 
 <div class="container d-flex justify-content-center align-items-center vh-100">
@@ -9,18 +9,24 @@ include_once URL_APP . '/views/custom/navbar.php';
             <div class="row">
                 <div class="col-md-6">
                     <h4 class="text-center">Iniciar Sesión</h4>
-                    <form action="">
+                    <form action="<?php echo URL_PROJECT?>/home/login" method="POST">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Usuario" required>
+                            <input type="text" name="usuario" class="form-control" placeholder="Usuario" required>
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Contraseña" required>
+                            <input type="password" name="contrasena" class="form-control" placeholder="Contraseña" required>
                         </div>
                         <button type="submit" class="btn btn-purple btn-block ">Ingresar</button>
                     </form>
                     <?php
+                    //alerta cuando el usuario o la contraseña son incorrectos
+                    if(isset($_SESSION['errorLogin'])){
+                        echo '<div class="alert alert-danger mt-3" role="alert">'.$_SESSION['errorLogin'].'</div>';
+                        unset($_SESSION['errorLogin']);
+                    }
+                    //alerta cuando el login se completo
                     if(isset($_SESSION['loginComplete'])){
-                        echo '<div class="alert alert-danger mt-3" role="alert">'.$_SESSION['loginComplete'].'</div>';
+                        echo '<div class="alert alert-success mt-3" role="alert">'.$_SESSION['loginComplete'].'</div>';
                         unset($_SESSION['loginComplete']);
                     }
 

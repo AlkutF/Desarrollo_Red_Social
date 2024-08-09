@@ -1,7 +1,7 @@
 
 <?php
 include_once URL_APP . '/views/custom/header.php';
-include_once URL_APP . '/views/custom/navbar.php';
+
 ?>
 
 <div class="container d-flex justify-content-center align-items-center vh-100">
